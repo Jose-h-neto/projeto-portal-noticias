@@ -124,3 +124,12 @@ aside {
         object-fit: cover;
     }
 }
+
+footer {
+    text-align: center;
+    justify-items: center;
+    padding-block: 20px;
+    font-size: 14px;
+    color: var(--text-color-secondary);
+    background-color: #0b1120;
+}
