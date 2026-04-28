@@ -2,87 +2,125 @@ section header {
     border-top: 1px solid var(--stroke-color);
     padding-block: 12px 24px;
     font: var(--text-span);
+
+    a {
+        justify-self: end;
+        align-items: center;
+        gap: 8px;
+
+        span {
+            background-image: url(../assets/icons/ArrowRight.svg);
+            width: 16px;
+            height: 16px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &:hover span {
+            background-image: url(../assets/icons/ArrowRightHover.svg);
+        }
+    }
 }
 
-section header a {
-    display: inline-flex;
-    justify-self: end;
-    align-items: center;
-    gap: 8px;
+#featured {
+
+    grid-area: featured;
+
+    img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .card {
+        border-radius: 4px;
+        overflow: hidden;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            top: 50%;
+            background: linear-gradient(180deg,
+                    transparent 0%,
+                    #020617 100%);
+        }
+
+        figcaption {
+            position: absolute;
+            bottom: 0;
+
+            padding: 24px;
+
+            &:has(.text-lg) {
+                padding: 12px;
+            }
+
+            h2 {
+                margin-top: 8px;
+            }
+        }
+    }
 }
 
-section header a span {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    background-image: url(../assets/icons/ArrowRight.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+#weekly {
+
+    grid-area: weekly;
+
+    &>div {
+        grid-template-columns: repeat(4, 292px);
+    }
+
+    img {
+        height: 160px;
+    }
+
+    figure {
+        position: relative;
+
+        .content-tag {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+        }
+
+        p {
+            margin-top: 8px;
+            font-weight: 800;
+        }
+    }
+
 }
 
-section header a:hover span {
-    background-image: url(../assets/icons/ArrowRightHover.svg);
+#ai {
+    grid-area: ai;
+
+    img {
+        width: 176px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    h3 {
+        margin-block: 8px 4px;
+    }
 }
 
-#featured img {
-    height: 100%;
-    object-fit: cover;
+aside {
+    grid-area: aside;
 }
 
-#featured .card {
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-}
+#more {
 
-#featured .card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    top: 50%;
-    background: linear-gradient(180deg, transparent 0%, #020617 100%);
-    border-radius: 4px;
-}
+    margin-top: 32px;
 
-#featured .card figcaption {
-    position: absolute;
-    bottom: 0;
-    padding: 24px;
-}
+    h3 {
+        margin-top: 8px;
+    }
 
-#featured .card figcaption:has(.text-lg) {
-    padding: 12px;
-}
-
-#featured .card figcaption h2 {
-    margin-top: 8px;
-}
-
-#weekly>header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-}
-
-#weekly>div {
-    grid-template-columns: repeat(4, 292px);
-}
-
-#weekly img {
-    height: 160px;
-}
-
-#weekly figure {
-    position: relative;
-}
-
-#weekly figure .content-tag {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-}
-
-#weekly figure p {
-    margin-top: 8px;
-    font-weight: 400;
+    img {
+        width: 72px;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
 }
