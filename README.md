@@ -55,11 +55,11 @@ PROJETO-PORTAL-NOTICIAS
 
 O projeto utiliza separação de estilos por responsabilidade:
 
-- `global.css`: estilos globais e reset  
+- `global.css`: estilos globais  
 - `header.css`: estilos do cabeçalho  
 - `sections.css`: estilos das seções principais  
 - `utility.css`: classes utilitárias  
-- `index.css`: estilos específicos da página principal  
+- `index.css`: importação organizada dos demais módulos  
 
 ## Como executar
 
@@ -78,7 +78,6 @@ Durante o desenvolvimento, foram trabalhados conceitos como:
 - Estruturação de layout com CSS  
 - Separação de responsabilidades (CSS modularizado)  
 - Organização de projeto front-end  
-- Responsividade básica  
 
 ## Autor
 
