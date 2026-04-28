@@ -16,7 +16,7 @@ Este projeto consiste em um portal de notícias estático, com foco na organiza�
 
 ## Estrutura do projeto
 
-
+```
 PROJETO-PORTAL-NOTICIAS
 ├── assets/
 │ ├── icons/
@@ -34,7 +34,7 @@ PROJETO-PORTAL-NOTICIAS
 │ ├── sections.css
 │ └── utility.css
 └── index.html
-
+```
 
 ## Funcionalidades
 
